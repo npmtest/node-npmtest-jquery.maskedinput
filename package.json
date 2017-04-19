@@ -1,1 +1,40 @@
-{     "devDependencies": {         "jquery.maskedinput": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-jquery.maskedinput",     "homepage": "https://github.com/npmtest/node-npmtest-jquery.maskedinput",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-jquery.maskedinput.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic test coverage for  [jquery.maskedinput (v1.4.1)](https://github.com/excellalabs/jquery.maskedinput#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-jquery.maskedinput.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-jquery.maskedinput) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-jquery.maskedinput.svg)](https://travis-ci.org/npmtest/node-npmtest-jquery.maskedinput)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "jquery.maskedinput": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-jquery.maskedinput",
+    "keywords": [
+        "coverage",
+        "test",
+        "jquery.maskedinput"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_jquery.maskedinput.js",
+    "name": "npmtest-jquery.maskedinput",
+    "nameAlias": "npmtest_jquery_maskedinput",
+    "nameOriginal": "npmtest-jquery.maskedinput",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-jquery.maskedinput.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
